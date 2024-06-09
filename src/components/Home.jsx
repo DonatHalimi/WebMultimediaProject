@@ -1,28 +1,27 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Navbar from './Navbar';
+import Slider from './Slider';
+import PixiBox from './PixiBox';
 import { Testimonials } from './Testimonials';
 import { Footer } from './Footer';
-import Slider from './Slider';
-import Product from './Product';
-import PixiBox from './PixiBox';
+
+const Categories = lazy(() => import('./Categories'));
+const Product = lazy(() => import('./Product'));
+const Video = lazy(() => import('./Video'));
 
 export const Home = () => {
-
     return (
         <div>
             <Navbar />
-
-            <Slider />
-
-            <Product />
-
-            <Testimonials />
-
-            <video src='../../src/Video.mp4' controls className='mx-auto my-auto mb-40'></video>
-
-            <PixiBox />
-
-            <Footer />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Slider />
+                <Categories />
+                <Product />
+                <Testimonials />
+                <Video />
+                <PixiBox />
+                <Footer />
+            </Suspense>
         </div>
     );
 };

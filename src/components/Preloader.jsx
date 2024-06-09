@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import musicNote from '../images/preloader.webp';
+import headphones from '../images/preloader.webp';
 
 const Preloader = () => {
     const [loading, setLoading] = useState(true);
@@ -13,9 +13,9 @@ const Preloader = () => {
     }, []);
 
     return (
-        <div className={`preloader ${loading ? '' : 'fade-out'}`}>
+        <div className='preloader mx-auto my-auto'>
             <div className="spinner">
-                <img src={musicNote} alt="Loading" />
+                <img src={headphones} alt="Loading" />
             </div>
         </div>
     );

@@ -93,7 +93,7 @@ body::-webkit-scrollbar-corner {
 .block-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 38%;
+    padding: 0 39%;
     margin-bottom: 100px;
 }
 
@@ -147,15 +147,16 @@ body::-webkit-scrollbar-corner {
     transition: opacity 1s ease-out;
 }
 
-.preloader.fade-out {
-    opacity: 0;
-    visibility: hidden;
+.spinner {
+    width: 250px;
+    height: 150px;
+    animation: pulse 1.7s infinite;
 }
 
-.spinner {
-    width: 400px;
-    height: 100px;
-    animation: pulse 1.7s infinite;
+.spinner img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 @keyframes pulse {
@@ -170,10 +171,4 @@ body::-webkit-scrollbar-corner {
     100% {
         transform: scale(1);
     }
-}
-
-.spinner img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
