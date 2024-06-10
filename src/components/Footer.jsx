@@ -26,7 +26,7 @@ export const Footer = () => {
                                 d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
                         </svg>
                     </a>
-                    <a href="#!" className="me-6 [&>svg]:h-4 [&>svg]:w-4">
+                    <a href="https://www.linkedin.com/in/donat-halimi-0719b0193/" target='_blank' className="me-6 [&>svg]:h-4 [&>svg]:w-4">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -35,7 +35,7 @@ export const Footer = () => {
                                 d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" />
                         </svg>
                     </a>
-                    <a href="#!" className="[&>svg]:h-4 [&>svg]:w-4">
+                    <a href="https://github.com/DonatHalimi/WebMultimediaProject" target='_blank' className="[&>svg]:h-4 [&>svg]:w-4">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -72,7 +72,7 @@ export const Footer = () => {
                     <div>
                         <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start select-none">
                         </h6>
-                                            </div>
+                    </div>
                     {/* Useful links section  */}
                     <div>
                         <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start select-none">
@@ -111,18 +111,19 @@ export const Footer = () => {
                             Lagjja Kalabria, 10000 Prishtinë, Kosovë
                         </p>
                         <p className="mb-4 flex items-center justify-center md:justify-start">
-                            <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">
+                            <span className="me-3 hover:text-blue-500">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 24 24"
-                                    fill="currentColor">
+                                    fill="currentColor"
+                                    className="h-5 w-5 inline-block">
                                     <path
                                         d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                                     <path
                                         d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                                 </svg>
                             </span>
-                            info@example.com
+                            <a href="mailto:info@example.com">info@example.com</a>
                         </p>
                         <p className="mb-4 flex items-center justify-center md:justify-start">
                             <span className="me-3 [&>svg]:h-5 [&>svg]:w-5">

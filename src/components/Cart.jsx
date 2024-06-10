@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaTrash } from 'react-icons/fa';
 import Navbar from './Navbar';
@@ -32,14 +32,23 @@ const Cart = () => {
     };
 
     const decrementQuantity = (name) => {
+        let itemRemoved = false;
         const updatedCartItems = cartItems.map(item => {
-            if (item.name === name && item.quantity > 1) {
-                item.quantity = item.quantity - 1;
+            if (item.name === name) {
+                if (item.quantity > 1) {
+                    item.quantity -= 1;
+                } else {
+                    itemRemoved = true;
+                    return null;
+                }
             }
             return item;
-        });
+        }).filter(item => item !== null);
         localStorage.setItem('cart', JSON.stringify(updatedCartItems));
         setCartItems(updatedCartItems);
+        if (itemRemoved) {
+            toast.success("Removed item from cart!");
+        }
     };
 
     return (
@@ -76,7 +85,7 @@ const Cart = () => {
                                                     <span>{price.toFixed(2)} €</span>
                                                     {discountAmount > 0 && (
                                                         <span className="text-green-500 text-sm">
-                                                           * Discount Savings: {(discountAmount).toFixed(2)} €
+                                                            * Discount Savings: {(discountAmount).toFixed(2)} €
                                                         </span>
                                                     )}
                                                 </div>
@@ -115,7 +124,6 @@ const Cart = () => {
                 </div>
             </main>
             <Footer />
-            <ToastContainer />
         </div>
     );
 };

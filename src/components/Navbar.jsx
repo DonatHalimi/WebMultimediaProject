@@ -7,10 +7,11 @@ const Navbar = () => {
         { path: '/', label: 'Home' },
         { path: '/cart', label: 'Cart' },
         { path: '/wishlist', label: 'Wishlist' },
+        { path: '/blog', label: 'Blog' },
     ];
 
     return (
-        <nav className="flex justify-between px-20 py-10 items-center bg-white">
+        <nav className="flex justify-between px-20 py-10 items-center bg-white border-gray-300">
             <Link to="/">
                 <h1 className="text-xl text-gray-800 font-bold select-none">Pixi</h1>
             </Link>

@@ -8,6 +8,7 @@ import Preloader from './components/Preloader';
 import Cart from './components/Cart';
 import Wishlist from './components/Wishlist';
 import ProductsByCategory from './components/ProductsByCategory';
+import Blog from './components/Blog';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -30,6 +31,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/wishlist' element={<Wishlist />} />
+            <Route path='/blog' element={<Blog />} />
             <Route path="/products/on-ear" element={<ProductsByCategory category="On-ear" />} />
             <Route path="/products/earbuds" element={<ProductsByCategory category="Earbuds" />} />
           </Routes>

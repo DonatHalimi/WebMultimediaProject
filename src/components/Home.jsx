@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import Navbar from './Navbar';
 import Slider from './Slider';
-import PixiBox from './PixiBox';
+// import PixiBox from './PixiBox';
 import { Testimonials } from './Testimonials';
 import { Footer } from './Footer';
 
@@ -19,7 +19,7 @@ export const Home = () => {
                 <Product />
                 <Testimonials />
                 <Video />
-                <PixiBox />
+                {/* <PixiBox /> */}
                 <Footer />
             </Suspense>
         </div>
