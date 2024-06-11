@@ -9,6 +9,7 @@ import Cart from './components/Cart';
 import Wishlist from './components/Wishlist';
 import ProductsByCategory from './components/ProductsByCategory';
 import Blog from './components/Blog';
+import CursorEffect from './components/CursorEffect';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      <CursorEffect />
       <ToTop />
       <ToastContainer />
       <Router>

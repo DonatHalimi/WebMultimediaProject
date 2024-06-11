@@ -1,10 +1,9 @@
 import React, { Suspense, lazy } from 'react';
 import Navbar from './Navbar';
-import Slider from './Slider';
-// import PixiBox from './PixiBox';
 import { Testimonials } from './Testimonials';
 import { Footer } from './Footer';
 
+const Slider = lazy(() => import('./Slider'));
 const Categories = lazy(() => import('./Categories'));
 const Product = lazy(() => import('./Product'));
 const Video = lazy(() => import('./Video'));
@@ -19,7 +18,6 @@ export const Home = () => {
                 <Product />
                 <Testimonials />
                 <Video />
-                {/* <PixiBox /> */}
                 <Footer />
             </Suspense>
         </div>

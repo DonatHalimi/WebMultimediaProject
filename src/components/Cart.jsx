@@ -56,7 +56,7 @@ const Cart = () => {
             <Navbar />
             <main className="flex-grow mb-52">
                 <div className="container mx-auto mt-20">
-                    <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+                    <h1 className="text-2xl font-bold col-span-4 mb-4">Your Cart</h1>
                     {cartItems.length === 0 ? (
                         <p className="text-center w-full">Your cart is empty.</p>
                     ) : (
@@ -73,6 +73,8 @@ const Cart = () => {
                             <tbody>
                                 {cartItems.map((item, index) => {
                                     const price = item.salePrice || item.price;
+                                    const quantity = item.quantity || 1;
+                                    const totalPrice = price * quantity;
                                     const discountAmount = item.previousPrice ? (item.previousPrice - price) : 0;
                                     return (
                                         <tr key={index} className="text-center p-4">
@@ -82,10 +84,10 @@ const Cart = () => {
                                             <td className="py-2 border-b">{item.name}</td>
                                             <td className="py-2 border-b">
                                                 <div className="flex flex-col items-center">
-                                                    <span>{price.toFixed(2)} €</span>
+                                                    <span>{totalPrice.toFixed(2)} €</span>
                                                     {discountAmount > 0 && (
                                                         <span className="text-green-500 text-sm">
-                                                            * Discount Savings: {(discountAmount).toFixed(2)} €
+                                                            * Discount Savings: {(discountAmount * quantity).toFixed(2)} €
                                                         </span>
                                                     )}
                                                 </div>
@@ -98,7 +100,7 @@ const Cart = () => {
                                                     >
                                                         -
                                                     </button>
-                                                    <span className="px-4 py-1 border-t border-b">{item.quantity || 1}</span>
+                                                    <span className="px-4 py-1 border-t border-b">{quantity}</span>
                                                     <button
                                                         onClick={() => incrementQuantity(item.name)}
                                                         className="bg-gray-200 hover:bg-gray-300 px-2 py-1 rounded-r-sm transition duration-300 ease-in-out"

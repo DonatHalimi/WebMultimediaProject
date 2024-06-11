@@ -6,7 +6,8 @@ const Slider = () => {
     const images = [
         "/src/images/slider-1.jpg",
         "/src/images/slider-2.jpg",
-        "/src/images/slider-3.jpg"
+        "/src/images/slider-3.jpg",
+        "/src/images/slider-4.jpg"
     ];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);

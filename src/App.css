@@ -1,9 +1,9 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+/* Base Styles */
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -13,6 +13,7 @@ body {
     color: white;
 }
 
+/* Scrollbar Styles */
 body::-webkit-scrollbar {
     width: 12px;
 }
@@ -36,6 +37,11 @@ body::-webkit-scrollbar-corner {
     background-color: #FFFFFF;
 }
 
+img,
+button {
+    user-select: none;
+}
+
 .text-gradient-gray {
     background: linear-gradient(to right, #dcdcdc, #4B5563);
     background-clip: text;
@@ -48,12 +54,7 @@ body::-webkit-scrollbar-corner {
     border-bottom: 2px solid #859fb1;
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
+/* Slider Container */
 .slider-container {
     position: relative;
     width: 100%;
@@ -71,15 +72,15 @@ body::-webkit-scrollbar-corner {
 
 .previous-button,
 .next-button {
-    margin-bottom: 460px;
     background: black;
-    opacity: 0.7;
+    color: white;
+    font-size: 24px;
+    border: none;
     border-radius: 20px;
     padding: 10px;
-    border: none;
     cursor: pointer;
-    font-size: 24px;
-    color: white;
+    opacity: 0.7;
+    margin-bottom: 460px;
 }
 
 .previous-button {
@@ -93,17 +94,18 @@ body::-webkit-scrollbar-corner {
 .block-container {
     display: flex;
     justify-content: space-between;
-    padding: 0 39%;
+    padding: 0 37%;
     margin-bottom: 100px;
 }
 
 .block {
-    margin-top: 5px;
+    position: relative;
     width: 130px;
     height: 15px;
+    margin-top: 5px;
+    margin-left: 8px;
     border-radius: 10px;
     background-color: #f0f0f0;
-    position: relative;
 }
 
 .block:after {
@@ -122,26 +124,17 @@ body::-webkit-scrollbar-corner {
     animation: fillUp 3s ease-in-out forwards;
 }
 
-@keyframes fillUp {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
+/* Preloader */
 .preloader {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
     z-index: 9999;
     opacity: 1;
     transition: opacity 1s ease-out;
@@ -157,6 +150,17 @@ body::-webkit-scrollbar-corner {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* Keyframes */
+@keyframes fillUp {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes pulse {

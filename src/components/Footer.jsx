@@ -79,16 +79,16 @@ export const Footer = () => {
                             Useful links
                         </h6>
                         <p className="mb-4">
-                            <a href="#!">Pricing</a>
+                            <a href="/">Home</a>
                         </p>
                         <p className="mb-4">
-                            <a href="#!">Settings</a>
+                            <a href="/cart">Cart</a>
                         </p>
                         <p className="mb-4">
-                            <a href="#!">Orders</a>
+                            <a href="/wishlist">Wishlist</a>
                         </p>
                         <p>
-                            <a href="#!">Help</a>
+                            <a href="/blog">Blog</a>
                         </p>
                     </div>
                     {/* Contact section */}
@@ -147,6 +147,7 @@ export const Footer = () => {
             <div className="bg-black/5 p-6 text-center select-none">
                 <span>© 2023 Copyright</span>
                 <a className="font-bold"> Pixi</a>
+                <a href='https://github.com/DonatHalimi' target='_blank' className="font-bold"> - Donat Halimi</a>
             </div>
         </footer>
     )

@@ -4,9 +4,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaTrash } from 'react-icons/fa';
 import Navbar from './Navbar';
 import { Footer } from './Footer';
+import { useAddToCart } from '../utils';
 
 const Wishlist = () => {
     const [wishlistproducts, setWishlistproducts] = useState([]);
+    const addToCart = useAddToCart();
 
     useEffect(() => {
         const products = JSON.parse(localStorage.getItem('wishlist')) || [];
@@ -20,17 +22,6 @@ const Wishlist = () => {
         toast.success("Removed item from wishlist!");
     };
 
-    const addToCart = (item) => {
-        const cartproducts = JSON.parse(localStorage.getproduct('cart')) || [];
-        cartproducts.push(item);
-        localStorage.setItem('cart', JSON.stringify(cartproducts));
-        toast.success("Added item to cart!", {
-            onClick: () => navigate('/cart'),
-            autoClose: 2000,
-            style: { cursor: 'pointer' }
-        });
-    };
-
     return (
         <div className="flex flex-col min-h-screen">
             <Navbar />
@@ -41,7 +32,7 @@ const Wishlist = () => {
                         <p className="text-center w-full col-span-4">Your wishlist is empty.</p>
                     ) : (
                         wishlistproducts.map((product, index) => (
-                            <div key={index} className="relative border border-gray-300 rounded-lg p-4 flex flex-col products-center h-full">
+                            <div key={index} className="relative border border-gray-300 rounded-lg p-4 flex flex-col items-center h-full">
                                 {product.discount && (
                                     <div className="absolute top-2 right-2 bg-orange-600 text-white px-2 py-1 rounded-md text-sm">
                                         -{product.discount.toFixed(0)}%

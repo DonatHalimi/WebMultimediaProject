@@ -94,7 +94,7 @@ const Product = () => {
 
     return (
         <div className="container mx-auto pl-32 pr-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <h1 className="text-2xl font-bold col-span-4">Products</h1>
+            <h1 className="text-2xl font-bold col-span-4 select-none">Products</h1>
             {products.map((product, index) => (
                 <div key={index} className="relative border border-gray-300 rounded-lg p-4 flex flex-col items-center h-full">
                     {product.discount && (
