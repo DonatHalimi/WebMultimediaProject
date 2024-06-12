@@ -71,8 +71,14 @@ export const Footer = () => {
                         <p className="mb-4">
                             <a href="/wishlist">Wishlist</a>
                         </p>
-                        <p>
+                        <p className="mb-4">
                             <a href="/blog">Blog</a>
+                        </p>
+                        <p className="mb-4">
+                            <a href="/contact">Contact</a>
+                        </p>
+                        <p>
+                            <a href="/about">About Us</a>
                         </p>
                     </div>
 
