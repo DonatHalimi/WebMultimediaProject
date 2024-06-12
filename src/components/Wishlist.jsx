@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 import { FaTrash } from 'react-icons/fa';
 import Navbar from './Navbar';
 import { Footer } from './Footer';
@@ -33,25 +34,29 @@ const Wishlist = () => {
                     ) : (
                         wishlistproducts.map((product, index) => (
                             <div key={index} className="relative border border-gray-300 rounded-lg p-4 flex flex-col items-center h-full">
-                                {product.discount && (
-                                    <div className="absolute top-2 right-2 bg-orange-700 text-white px-2 py-1 rounded-md text-sm">
-                                        -{product.discount.toFixed(0)}%
-                                    </div>
-                                )}
-                                <img src={product.photo} alt={product.name} className="w-full h-48 object-contain mb-4" />
-                                <h2 className="text-lg font-semibold mb-2 text-start ml-2">{product.name}</h2>
-                                <div className="w-full flex justify-start">
-                                    {product.salePrice ? (
-                                        <>
-                                            <p className="text-gray-800 font-bold text-xl mb-2 ml-2">{product.salePrice.toFixed(2)} €</p>
-                                            {product.previousPrice && (
-                                                <p className="text-gray-500 line-through mt-1 ml-2">{product.previousPrice.toFixed(2)} €</p>
-                                            )}
-                                        </>
-                                    ) : (
-                                        <p className="text-gray-800 font-bold text-xl mb-2 ml-2">{product.price.toFixed(2)} €</p>
+                                <Link to={`/product/${product.id}`} className="w-full h-full">
+
+                                    {product.discount && (
+                                        <div className="absolute top-2 right-2 bg-orange-700 text-white px-2 py-1 rounded-md text-sm">
+                                            -{product.discount.toFixed(0)}%
+                                        </div>
                                     )}
-                                </div>
+                                    <img src={product.photo} alt={product.name} className="w-full h-48 object-contain mb-4" />
+                                    <h2 className="text-lg font-semibold mb-2 text-start ml-2">{product.name}</h2>
+                                    <div className="w-full flex justify-start">
+                                        {product.salePrice ? (
+                                            <>
+                                                <p className="text-gray-800 font-bold text-xl mb-2 ml-2">{product.salePrice.toFixed(2)} €</p>
+                                                {product.previousPrice && (
+                                                    <p className="text-gray-500 line-through mt-1 ml-2">{product.previousPrice.toFixed(2)} €</p>
+                                                )}
+                                            </>
+                                        ) : (
+                                            <p className="text-gray-800 font-bold text-xl mb-2 ml-2">{product.price.toFixed(2)} €</p>
+                                        )}
+                                    </div>
+                                </Link>
+
                                 <div className="mt-auto flex w-full">
                                     <button
                                         onClick={() => addToCart(product)}

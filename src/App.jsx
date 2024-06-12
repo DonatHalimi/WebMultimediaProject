@@ -12,6 +12,7 @@ import Blog from './components/Blog';
 import CursorEffect from './components/CursorEffect';
 import About from './components/About';
 import { Contact } from './components/Contact';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -38,8 +39,9 @@ function App() {
             <Route path='/blog' element={<Blog />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path="/products/on-ear" element={<ProductsByCategory category="On-ear" />} />
-            <Route path="/products/earbuds" element={<ProductsByCategory category="Earbuds" />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/products/On-ear" element={<ProductsByCategory category="On-ear" />} />
+            <Route path="/products/Earbuds" element={<ProductsByCategory category="Earbuds" />} />
           </Routes>
         )}
       </Router>

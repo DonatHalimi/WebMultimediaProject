@@ -1,5 +1,6 @@
 import React from 'react';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from 'react-router-dom';
 import { useAddToCart, useAddToWishlist } from '../utils';
 import product1 from '../images/product-1.jpg';
 import product2 from '../images/product-2.jpg';
@@ -23,7 +24,8 @@ export const products = [
         salePrice: 459.50,
         previousPrice: 518.50,
         discount: calculateDiscount(518.50, 459.50),
-        category: 'On-ear'
+        category: 'On-ear',
+        description: 'High-quality on-ear headphones with noise-cancelling feature and superior sound quality. Ideal for long hours of use with comfortable fit.'
     },
     {
         id: 2,
@@ -32,7 +34,8 @@ export const products = [
         salePrice: 559.50,
         previousPrice: 639.50,
         discount: calculateDiscount(639.50, 559.50),
-        category: "On-ear"
+        category: "On-ear",
+        description: 'Top-of-the-line headphones from Bose with exceptional sound clarity and noise cancellation. Perfect for audiophiles.'
     },
     {
         id: 3,
@@ -41,7 +44,8 @@ export const products = [
         salePrice: 529.50,
         previousPrice: 578.50,
         discount: calculateDiscount(578.50, 529.50),
-        category: "On-ear"
+        category: "On-ear",
+        description: 'Sony\'s latest model with improved battery life and enhanced sound quality. Available in black.'
     },
     {
         id: 4,
@@ -49,7 +53,8 @@ export const products = [
         photo: product4,
         price: 429.50,
         discount: null,
-        category: 'On-ear'
+        category: 'On-ear',
+        description: 'Bose QuietComfort 45 offers superb noise cancellation and comfortable ear pads for extended use.'
     },
     {
         id: 5,
@@ -58,7 +63,8 @@ export const products = [
         salePrice: 506.50,
         previousPrice: 562.50,
         discount: calculateDiscount(562.50, 506.50),
-        category: 'On-ear'
+        category: 'On-ear',
+        description: 'Stylish silver headphones with noise-cancelling technology and high-resolution audio support from Sony.'
     },
     {
         id: 6,
@@ -66,7 +72,8 @@ export const products = [
         photo: product6,
         price: 559.30,
         discount: null,
-        category: 'On-ear'
+        category: 'On-ear',
+        description: 'Bose QuietComfort Ultra in white, featuring state-of-the-art noise cancellation and superior sound performance.'
     },
     {
         id: 7,
@@ -75,7 +82,8 @@ export const products = [
         salePrice: 139.50,
         previousPrice: 169.50,
         discount: calculateDiscount(169.50, 139.50),
-        category: 'Earbuds'
+        category: 'Earbuds',
+        description: 'Compact and lightweight earbuds with excellent sound quality and long battery life from Samsung.'
     },
     {
         id: 8,
@@ -84,7 +92,8 @@ export const products = [
         salePrice: 139.50,
         previousPrice: 169.50,
         discount: calculateDiscount(169.50, 139.50),
-        category: 'Earbuds'
+        category: 'Earbuds',
+        description: 'Samsung Galaxy Buds FE in grey, offering a secure fit and superior audio experience for music lovers on the go.'
     }
 ];
 
@@ -97,25 +106,27 @@ const Product = () => {
             <h1 className="text-2xl font-bold col-span-4 select-none">Products</h1>
             {products.map((product, index) => (
                 <div key={index} className="relative border border-gray-300 rounded-lg p-4 flex flex-col items-center h-full">
-                    {product.discount && (
-                        <div className="absolute top-2 right-2 bg-orange-700 text-white px-2 py-1 rounded-md text-sm">
-                            -{product.discount.toFixed(0)}%
-                        </div>
-                    )}
-                    <img src={product.photo} alt={product.name} className="w-full h-48 object-contain mb-4" />
-                    <h2 className="text-lg font-semibold mb-2 text-start ml-2">{product.name}</h2>
-                    <div className="w-full flex justify-start ml-2">
-                        {product.salePrice ? (
-                            <>
-                                <p className="text-gray-800 font-bold text-xl mb-2">{product.salePrice.toFixed(2)} €</p>
-                                {product.previousPrice && (
-                                    <p className="text-gray-500 line-through mt-1 ml-2">{product.previousPrice.toFixed(2)} €</p>
-                                )}
-                            </>
-                        ) : (
-                            <p className="text-gray-800 font-bold text-xl mb-2">{product.price.toFixed(2)} €</p>
+                    <Link to={`/product/${product.id}`} className="w-full h-full">
+                        {product.discount && (
+                            <div className="absolute top-2 right-2 bg-orange-700 text-white px-2 py-1 rounded-md text-sm">
+                                -{product.discount.toFixed(0)}%
+                            </div>
                         )}
-                    </div>
+                        <img src={product.photo} alt={product.name} className="w-full h-48 object-contain mb-4" />
+                        <h2 className="text-lg font-semibold mb-2 text-start ml-2">{product.name}</h2>
+                        <div className="w-full flex justify-start ml-2">
+                            {product.salePrice ? (
+                                <>
+                                    <p className="text-gray-800 font-bold text-xl mb-2">{product.salePrice.toFixed(2)} €</p>
+                                    {product.previousPrice && (
+                                        <p className="text-gray-500 line-through mt-1 ml-2">{product.previousPrice.toFixed(2)} €</p>
+                                    )}
+                                </>
+                            ) : (
+                                <p className="text-gray-800 font-bold text-xl mb-2">{product.price.toFixed(2)} €</p>
+                            )}
+                        </div>
+                    </Link>
                     <div className="mt-auto flex w-full">
                         <button
                             onClick={() => addToCart(product)}
@@ -132,7 +143,7 @@ const Product = () => {
                     </div>
                 </div>
             ))}
-        </div>
+        </div >
     );
 };
 
