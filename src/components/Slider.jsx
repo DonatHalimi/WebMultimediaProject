@@ -67,8 +67,8 @@ const Slider = () => {
                 ))}
             </div>
             <div className="button-container">
-                <button className="previous-button" onClick={goToPreviousImage}><FaArrowLeft /></button>
-                <button className="next-button" onClick={goToNextImage}><FaArrowRight /></button>
+                <button className="previous-button" onClick={goToPreviousImage} aria-label="Previous Image"><FaArrowLeft /></button>
+                <button className="next-button" onClick={goToNextImage} aria-label="Next Image"><FaArrowRight /></button>
             </div>
         </div>
     );

@@ -10,6 +10,8 @@ import Wishlist from './components/Wishlist';
 import ProductsByCategory from './components/ProductsByCategory';
 import Blog from './components/Blog';
 import CursorEffect from './components/CursorEffect';
+import About from './components/About';
+import { Contact } from './components/Contact';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -34,6 +36,8 @@ function App() {
             <Route path='/cart' element={<Cart />} />
             <Route path='/wishlist' element={<Wishlist />} />
             <Route path='/blog' element={<Blog />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path="/products/on-ear" element={<ProductsByCategory category="On-ear" />} />
             <Route path="/products/earbuds" element={<ProductsByCategory category="Earbuds" />} />
           </Routes>

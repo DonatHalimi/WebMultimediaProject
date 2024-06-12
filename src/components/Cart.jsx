@@ -86,7 +86,7 @@ const Cart = () => {
                                                 <div className="flex flex-col items-center">
                                                     <span>{totalPrice.toFixed(2)} €</span>
                                                     {discountAmount > 0 && (
-                                                        <span className="text-green-500 text-sm">
+                                                        <span className="text-green-600 text-sm">
                                                             * Discount Savings: {(discountAmount * quantity).toFixed(2)} €
                                                         </span>
                                                     )}
@@ -113,6 +113,7 @@ const Cart = () => {
                                                 <button
                                                     onClick={() => removeFromCart(item.name)}
                                                     className="text-gray-500 hover:text-gray-800 p-4 transition duration-300 ease-in-out"
+                                                    aria-label='Trash-Button'
                                                 >
                                                     <FaTrash />
                                                 </button>

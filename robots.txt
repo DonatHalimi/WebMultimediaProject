@@ -1,0 +1,15 @@
+# Allow all web crawlers to index all content
+User-agent: *
+Allow: /
+
+# Disallow specific directories (e.g., sensitive or irrelevant directories)
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Disallow specific files (e.g., sensitive or irrelevant files)
+Disallow: /secret.html
+Disallow: /old-version.html
+
+# Sitemap location (if you have a sitemap)
+Sitemap: https://yourwebsite.com/sitemap.xml

@@ -1,0 +1,21 @@
+{
+    "name": "Web Multimedia Project",
+    "short_name": "WMP",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB",
+    "icons": [
+        {
+            "src": "PixiJSLogo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "PixiJSLogo-large.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

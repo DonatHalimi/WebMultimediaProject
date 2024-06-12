@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const Testimonials = () => {
     return (
@@ -7,7 +7,7 @@ export const Testimonials = () => {
                 <div className="w-full max-w-6xl mx-auto">
                     <div className="text-center max-w-xl mx-auto">
                         <h1 className="text-6xl md:text-7xl font-bold mb-5 text-gradient-gray leading-tight select-none">Discover <br />Customer Stories</h1>
-                        <h3 className="text-xl mb-5 font-light select-none">Explore the joy of cutting-edge products through our customers' experiences.</h3>
+                        <h2 className="text-xl mb-5 font-light select-none">Explore the joy of cutting-edge products through our customers' experiences.</h2>
                         <div className="text-center mb-10">
                             <span className="inline-block w-1 h-1 rounded-full bg-gray-600 ml-1"></span>
                             <span className="inline-block w-3 h-1 rounded-full bg-gray-600 ml-1"></span>
@@ -24,7 +24,7 @@ export const Testimonials = () => {
                                         <img src="https://i.pravatar.cc/100?img=1" alt="" />
                                     </div>
                                     <div className="flex-grow pl-3">
-                                        <h6 className="font-bold text-sm uppercase text-gray-600">Kenzie Edgar</h6>
+                                        <h2 className="font-bold text-sm uppercase text-gray-600">Kenzie Edgar</h2>
                                     </div>
                                 </div>
                                 <div className="w-full">
@@ -37,7 +37,7 @@ export const Testimonials = () => {
                                         <img src="https://i.pravatar.cc/100?img=2" alt="" />
                                     </div>
                                     <div className="flex-grow pl-3">
-                                        <h6 className="font-bold text-sm uppercase text-gray-600">Stevie Tifft</h6>
+                                        <h2 className="font-bold text-sm uppercase text-gray-600">Stevie Tifft</h2>
                                     </div>
                                 </div>
                                 <div className="w-full">
@@ -52,11 +52,11 @@ export const Testimonials = () => {
                                         <img src="https://i.pravatar.cc/100?img=3" alt="" />
                                     </div>
                                     <div className="flex-grow pl-3">
-                                        <h6 className="font-bold text-sm uppercase text-gray-600">Tommie Ewart</h6>
+                                        <h2 className="font-bold text-sm uppercase text-gray-600">Tommie Ewart</h2>
                                     </div>
                                 </div>
                                 <div className="w-full">
-                                    <p className="text-sm leading-tight"><span className="text-lg leading-none italic font-bold text-gray-400 mr-1 select-none">"</span>Discovering Pixi was a game-changer for my wardrobe! The store offers a unique blend of trendy and classic pieces that perfectly suit my style. From casual wear to elegant evening attire, they have it all. <span className="text-lg leading-none italic font-bold text-gray-400 ml-1 select-none">"</span></p>
+                                    <p className="text-sm leading-tight"><span className="text-lg leading-none italic font-bold text-gray-400 mr-1 select-none">"</span>Discovering Pixi was a game-changer for my wardrobe! The store offers a unique blend of trendy and classic pieces that perfectly suit my style. From casual wear to elegant evening attire, they have it all.<span className="text-lg leading-none italic font-bold text-gray-400 ml-1 select-none">"</span></p>
                                 </div>
                             </div>
                             <div className="w-full mx-auto rounded-lg bg-white border border-gray-200 p-5 text-gray-800 font-light mb-6">
@@ -65,7 +65,7 @@ export const Testimonials = () => {
                                         <img src="https://i.pravatar.cc/100?img=4" alt="" />
                                     </div>
                                     <div className="flex-grow pl-3">
-                                        <h6 className="font-bold text-sm uppercase text-gray-600">Charlie Howse</h6>
+                                        <h2 className="font-bold text-sm uppercase text-gray-600">Charlie Howse</h2>
                                     </div>
                                 </div>
                                 <div className="w-full">
@@ -80,7 +80,7 @@ export const Testimonials = () => {
                                         <img src="https://i.pravatar.cc/100?img=5" alt="" />
                                     </div>
                                     <div className="flex-grow pl-3">
-                                        <h6 className="font-bold text-sm uppercase text-gray-600">Nevada Herbertson</h6>
+                                        <h2 className="font-bold text-sm uppercase text-gray-600">Nevada Herbertson</h2>
                                     </div>
                                 </div>
                                 <div className="w-full">
@@ -93,7 +93,7 @@ export const Testimonials = () => {
                                         <img src="https://i.pravatar.cc/100?img=6" alt="" />
                                     </div>
                                     <div className="flex-grow pl-3">
-                                        <h6 className="font-bold text-sm uppercase text-gray-600">Kris Stanton</h6>
+                                        <h2 className="font-bold text-sm uppercase text-gray-600">Kris Stanton</h2>
                                     </div>
                                 </div>
                                 <div className="w-full">

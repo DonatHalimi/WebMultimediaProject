@@ -8,6 +8,8 @@ const Navbar = () => {
         { path: '/cart', label: 'Cart' },
         { path: '/wishlist', label: 'Wishlist' },
         { path: '/blog', label: 'Blog' },
+        { path: '/contact', label: 'Contact' },
+        { path: '/about', label: 'About' },
     ];
 
     return (

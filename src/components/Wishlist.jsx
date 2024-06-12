@@ -34,7 +34,7 @@ const Wishlist = () => {
                         wishlistproducts.map((product, index) => (
                             <div key={index} className="relative border border-gray-300 rounded-lg p-4 flex flex-col items-center h-full">
                                 {product.discount && (
-                                    <div className="absolute top-2 right-2 bg-orange-600 text-white px-2 py-1 rounded-md text-sm">
+                                    <div className="absolute top-2 right-2 bg-orange-700 text-white px-2 py-1 rounded-md text-sm">
                                         -{product.discount.toFixed(0)}%
                                     </div>
                                 )}
@@ -62,6 +62,7 @@ const Wishlist = () => {
                                     <button
                                         onClick={() => removeFromWishlist(product.name)}
                                         className="bg-gray-100 text-gray-600 hover:bg-gray-200 w-1/5 py-2 mb-2 ml-2 text-xl rounded-sm transition duration-500"
+                                        aria-label='Trash-Button'
                                     >
                                         <FaTrash style={{ marginLeft: '15px' }} />
                                     </button>

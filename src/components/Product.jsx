@@ -98,7 +98,7 @@ const Product = () => {
             {products.map((product, index) => (
                 <div key={index} className="relative border border-gray-300 rounded-lg p-4 flex flex-col items-center h-full">
                     {product.discount && (
-                        <div className="absolute top-2 right-2 bg-orange-600 text-white px-2 py-1 rounded-md text-sm">
+                        <div className="absolute top-2 right-2 bg-orange-700 text-white px-2 py-1 rounded-md text-sm">
                             -{product.discount.toFixed(0)}%
                         </div>
                     )}
